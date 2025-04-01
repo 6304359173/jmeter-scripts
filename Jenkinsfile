@@ -20,7 +20,7 @@ pipeline {
                 echo 'Running JMeter tests...'
                 
                 // Run JMeter tests
-                sh '''
+                bat '''
                     jmeter -n -t jmeter-scripts/JSON2.jmx -l jmeter-scripts/results/result.jtl
                 '''
             }
