@@ -17,8 +17,9 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Running JMeter tests...'
-                 bat 'C:\\apache-jmeter-5.6.3\\bin\\jmeter -n -t jmeter-scripts\\JSON2.jmx -l jmeter-scripts\\results\\result.jtl'
+                echo 'Running JMeter tests...'                
+                bat 'cd jmeter-scripts && C:\\apache-jmeter-5.6.3\\bin\\jmeter -n -t JSON2.jmx -l results/result.jtl'
+
             }
         }
 
